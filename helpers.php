@@ -8,7 +8,7 @@ function uploadFile($image, $path)
     $fileExtenssion = pathinfo($image->getClientOriginalName(), PATHINFO_EXTENSION);
     $full_name  = $file_name.'.'.$fileExtenssion;
     $image->storeAs('public/uloaded_files/'.$path, $full_name);
-    return 'storage/'.$path().$full_name;
+    return 'storage/'.$path.$full_name;
 }
 
 
